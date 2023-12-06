@@ -4,75 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Enlazar los archivos CSS de Bootstrap desde CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <!-- Enlazar los archivos JS de Bootstrap desde CDN (si es necesario) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
     <title>Portfolio</title>
 </head>
 
 <body>
     <div class="container">
         <!-- header -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+        <nav class="contenedor-flex">
+            <h2 class="sr-only">Menu de navegacion</h2>
+
+            <div class="contenedor-logo">
+                <a href="#">
+                    <img src="" alt="img">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
+
+            <div class="contenedor-menu">
+                <ul class="lista-opciones">
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Sobre mí</a>
+                    </li>
+                    <li>
+                        <a href="#">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contenedor-redes">
+                <ul class="lista-redes" >
+                    <li>
+                        <a href="#"><img class="logos-redes" src="/img/facebook.svg" alt="Facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="logos-redes" src="/img/linkedin.svg" alt="Linkedin"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img class="logos-redes" src="/img/instagram.svg" alt="Instagram"></a>
+                    </li>
+                </ul>
+            </div>
+
         </nav>
     </div>
-
-
-    <h1 class="animate__animated animate__bounce">An animated element</h1>
-
-    <!-- main
-    <div id="sobre-mi" class="container">
-        <h2>Sobre Mí</h2>
-        <!-- Contenido de la sección Sobre Mí 
-    </div>
-
-    <div id="proyectos" class="container">
-        <h2>Proyectos</h2>
-         Contenido de la sección Proyectos 
-    </div>
-
-    <!-- footer 
-    <div id="sobre-mi" class="container">
-        <h2>Sobre Mí</h2>
-        <p>Hola, soy [Tu Nombre], un apasionado desarrollador web...</p>
-    </div>
-
-    <div id="proyectos" class="container">
-        <h2>Proyectos</h2>
-        <!-- Muestra tus proyectos utilizando componentes de Bootstrap si es necesario 
-    </div> -->
 
 </body>
 

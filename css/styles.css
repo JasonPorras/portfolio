@@ -1,0 +1,86 @@
+/* Estilos básicos */
+body {
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/*estilos para el menu*/
+.contenedor-flex {
+    display: flex !important;
+    width: 100%;
+    gap: 6%;
+}
+
+.contenedor-logo{
+    width: 25%;
+}
+
+.contenedor-menu{
+    width: 50%;
+}
+
+.contenedor-redes{
+    width: 25%;
+}
+
+.lista-opciones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-redes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos-redes {
+    width: 30%;
+}
+
+
