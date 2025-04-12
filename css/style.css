@@ -1,0 +1,230 @@
+/* #7e49e9 --morado
+#b8a1d6 -claro mo
+#1f1926 -oscuro
+#64baa9 --verde */
+
+/* =========== Global Resets =========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========== General Styles =========== */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* =========== Animation Settings =========== */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* =========== Specific Animations =========== */
+.zoomIn {
+    animation-name: zoomIn
+}
+
+.fadeIn {
+    animation: fadeIn 3s forwards;
+}
+
+/* =========== Presentation =========== */
+
+.presentation {
+    min-height: 100vh;
+    background-color: #7e49e9;
+    text-align: center;
+    position: relative;
+}
+
+.presentation__profile {
+    height: fit-content;
+}
+
+.presentation__profile-img {
+    border-radius: 29%;
+}
+
+.presentation__text {
+    color: white;
+}
+
+.presentation__name {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: lighter;
+}
+
+.presentation__name--bold {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.presentation__profession {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.presentation__button {
+    background-color: white;
+    width: 14rem;
+    height: 3.5rem;
+    border-radius: 30px;
+    color: #27184b;
+    font-size: 1.25rem;
+    font-weight: 600;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+}
+
+.presentation__button-icon {
+    background-color: #4ade80;
+    border-radius: 30px;
+    height: 3rem;
+    width: 25%;
+    position: absolute;
+    left: 0.25rem;
+    top: 4px;
+    transition: width 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.presentation__button:hover .presentation__button-icon {
+    width: 13.5rem;
+}
+
+.presentation__button-icon i {
+    transition: transform 0.5s ease-out;
+}
+
+.presentation__button:hover .presentation__button-icon i {
+    transform: rotate(90deg);
+}
+
+.presentation__buttons p {
+    transform: translateX(1.5rem);
+}
+
+.presentation__arrow {
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+    margin-top: -16px;
+    animation: glowSequence 1.5s infinite ease-in-out;
+}
+
+.presentation__arrow:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.presentation__arrow:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.presentation__arrow:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+/* =========== Entry Animations =========== */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3)
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes action {
+    100% {
+        transform: translateY(-15px);
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowSequence {
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+/* =========== Responsividad =========== */
+@media (max-width: 900px) {}
+
+@media (max-width: 600px) {}
+
+@media (min-width: 768px) {
+    .presentation__profile {
+        flex-direction: row;
+    }
+
+    .presentation__name {
+        font-size: 2rem;
+    }
+
+    .presentation__name--bold {
+        font-size: 2.5rem;
+    }
+
+    .presentation__profession {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+        padding: 15px 30px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .presentation__profile {
+        padding: 0px;
+    }
+
+    .presentation__text {
+        text-align: left;
+    }
+
+    .presentation__name {
+        font-size: 3rem;
+    }
+
+    .presentation__name--bold {
+        font-size: 4rem;
+    }
+
+    .presentation__buttons {
+        justify-content: left;
+    }
+}
