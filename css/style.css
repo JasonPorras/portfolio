@@ -33,75 +33,50 @@ body {
 /* =========== Presentation =========== */
 
 .presentation {
-    min-height: 100vh;
     background-color: #7e49e9;
-    text-align: center;
-    position: relative;
-}
-
-.presentation__profile {
-    height: fit-content;
+    min-height: 100vh;
 }
 
 .presentation__profile-img {
-    border-radius: 29%;
+    width: 290px !important;
 }
 
-.presentation__text {
-    color: white;
-}
-
-.presentation__name {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    font-weight: lighter;
-}
-
-.presentation__name--bold {
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-}
-
-.presentation__profession {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.presentation__button {
+/* Botón animado */
+.presentation__buttons button {
     background-color: white;
+    text-align: center;
     width: 14rem;
     height: 3.5rem;
-    border-radius: 30px;
-    color: #27184b;
     font-size: 1.25rem;
-    font-weight: 600;
-    overflow: hidden;
     border: none;
-    cursor: pointer;
 }
 
-.presentation__button-icon {
-    background-color: #4ade80;
-    border-radius: 30px;
+.presentation__buttons button:hover {
+    background-color: white !important;
+}
+
+.presentation__buttons button div {
+    background-color: #4ade80 !important;
     height: 3rem;
-    width: 25%;
-    position: absolute;
-    left: 0.25rem;
-    top: 4px;
+    width: 23% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    left: 0.25rem !important;
+    top: 4px !important;
     transition: width 0.5s ease-in-out;
     z-index: 10;
 }
 
-.presentation__button:hover .presentation__button-icon {
-    width: 13.5rem;
+.presentation__buttons button:hover div {
+    width: 13.5rem !important;
 }
 
-.presentation__button-icon i {
+.presentation__buttons button div i {
     transition: transform 0.5s ease-out;
 }
 
-.presentation__button:hover .presentation__button-icon i {
+.presentation__buttons button:hover div i {
     transform: rotate(90deg);
 }
 
@@ -109,9 +84,16 @@ body {
     transform: translateX(1.5rem);
 }
 
+.presentation__buttons span {
+    margin-left: 2.5rem
+}
+
+/* Animación flechas */
+.presentation__arrows {
+    bottom: 10px;
+}
+
 .presentation__arrow {
-    width: 40px;
-    height: 40px;
     opacity: 0.3;
     margin-top: -16px;
     animation: glowSequence 1.5s infinite ease-in-out;
@@ -128,7 +110,6 @@ body {
 .presentation__arrow:nth-child(3) {
     animation-delay: 0.4s;
 }
-
 
 /* =========== Entry Animations =========== */
 @keyframes zoomIn {
@@ -179,52 +160,31 @@ body {
 }
 
 /* =========== Responsividad =========== */
-@media (max-width: 900px) {}
 
 @media (max-width: 600px) {}
 
 @media (min-width: 768px) {
-    .presentation__profile {
-        flex-direction: row;
+
+    /* =========== Presentation =========== */
+    .presentation__profile-img {
+        width: auto !important;
+        max-width: 100% !important;
     }
 
-    .presentation__name {
-        font-size: 2rem;
-    }
-
-    .presentation__name--bold {
-        font-size: 2.5rem;
-    }
-
-    .presentation__profession {
-        font-size: 1.8rem;
-    }
-
-    .btn {
-        font-size: 1.1rem;
-        padding: 15px 30px;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    .presentation__profile {
-        padding: 0px;
-    }
-
-    .presentation__text {
-        text-align: left;
-    }
-
-    .presentation__name {
-        font-size: 3rem;
-    }
-
-    .presentation__name--bold {
-        font-size: 4rem;
-    }
-
-    .presentation__buttons {
-        justify-content: left;
+    /* Animación flechas */
+    .presentation__arrows {
+        bottom: 30px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* =========== Presentation =========== */
+    .presentation__name--bold {
+        font-size: 40px !important;
+    }
+}
+
+@media (max-width: 900px) {}
+
+@media (min-width: 1024px) {}
